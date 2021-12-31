@@ -1,5 +1,11 @@
+from brownie import accounts
+
+
 def deploy_simple_storage():
-    pass
+    # account = accounts[0]
+    # print(account)
+    account = accounts.load("freecodecamp-account")
+    print(account)
 
 
 def main():
