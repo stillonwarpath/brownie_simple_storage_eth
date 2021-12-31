@@ -1,13 +1,12 @@
-from brownie import accounts, config
+from brownie import accounts, config, SimpleStorage
 
 
 def deploy_simple_storage():
-    # account = accounts[0]
-    # print(account)
-    # account = accounts.load("freecodecamp-account")
-    # print(account)
-    account = accounts.add(config["wallets"]["from_key"])
-    print(account)
+    account = accounts[0]
+    simple_storage = SimpleStorage.deploy({"from": account})
+    # Transact
+    # Call
+    print(simple_storage)
 
 
 def main():
